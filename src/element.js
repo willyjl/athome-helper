@@ -5,7 +5,7 @@
     <div id="athome-helper" class="itemDataBox">
       <dl class="data typeTable">
         <dt class="cell01 I8I">Price</dt>
-        <dd>{{ price }}</dd>
+        <dd>{{price}}</dd>
       </dl>
     </div>
   `;
@@ -23,13 +23,13 @@
       });
     },
     appendToBody() {
-      // jq("#item-detai_basic").prepend(tableEl);
-      jq(".mainItemInfo").prepend(tableEl);
+      jq("#item-detai_basic").prepend(tableEl);
+      // jq(".mainItemInfo").prepend(tableEl);
     },
     startApp() {
       this.appendToBody();
       setTimeout(() => {
-        tableComp.mount('athome-helper');
+        tableComp.$mount('#athome-helper');
       }, 3000);
     }
   };
