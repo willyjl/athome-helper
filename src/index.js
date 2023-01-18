@@ -10,7 +10,9 @@
 // @require      https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js
 // @require      https://github.com/willyjl/athome-helper/raw/master/src/element.js
 // @grant        none
-// @run-at document-body
+// @updateURL    https://github.com/willyjl/athome-helper/raw/master/src/index.js
+// @downloadURL  https://github.com/willyjl/athome-helper/raw/master/src/index.js
+// @run-at document-end
 // ==/UserScript==
 
 window.jq = $.noConflict(true);
@@ -19,7 +21,7 @@ window.jq = $.noConflict(true);
   'use strict';
 
   console.log("hello");
-  athomeHelper.main(function() {
+  athomeHelper.main(() => {
     athomeHelper.startApp();
   });
 })();
