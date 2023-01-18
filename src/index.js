@@ -8,11 +8,18 @@
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @require      https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js
 // @require      https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js
+// @require      https://github.com/willyjl/athome-helper/raw/master/src/element.js
 // @grant        none
+// @run-at document-body
 // ==/UserScript==
+
+window.jq = $.noConflict(true);
 
 (function() {
   'use strict';
 
   console.log("hello");
+  athomeHelper.main(function() {
+    athomeHelper.startApp();
+  });
 })();
